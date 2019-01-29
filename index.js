@@ -5,9 +5,7 @@ module.exports = {
   message: '',
 
   removeArrayItem: function(id){
-    for (var i in this.messageLog) {
-      if (this.messageLog[i].author === id) this.messageLog.splice(i, 1)
-    }
+    this.messageLog = this.messageLog.filter(item => item.author != id)
   },
   /**
    * @description listen/attach detector to the chat
