@@ -4,6 +4,11 @@ module.exports = {
   messageLog: [],
   message: '',
 
+  removeArrayItem: function(id){
+    for (var i in this.messageLog) {
+      if (this.messageLog[i].author === id) this.messageLog.splice(i, 1)
+    }
+  },
   /**
    * @description listen/attach detector to the chat
    * @param message - Discord.js message object
@@ -37,8 +42,8 @@ module.exports = {
     let currentTimeStamp = msg[msg.length - 1].timeStamp
     let msgInterval = currentTimeStamp - lastTimeStamp
     // trigger and clear this user from array
-    if( msgInterval <= interval) {
-      this.messageLog.splice(this.messageLog.indexOf(msg), 1)
+    if (msgInterval <= interval) {
+      this.removeArrayItem(this.message.author.id)
       return true
     }
     return false
