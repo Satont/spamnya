@@ -36,8 +36,11 @@ module.exports = {
     let lastTimeStamp = msg[msg.length - amount].timeStamp
     let currentTimeStamp = msg[msg.length - 1].timeStamp
     let msgInterval = currentTimeStamp - lastTimeStamp
-
-    if( msgInterval <= interval) return true
+    // trigger and clear this user from array
+    if( msgInterval <= interval) {
+      this.messageLog.splice(this.messageLog.indexOf(msg), 1)
+      return true
+    }
     return false
   },
   /**
