@@ -34,7 +34,7 @@ module.exports = {
 
     // ignore it if the logs are bellow treshold
     if(msg.length < amount) return false
-    
+
     // space-time continum manipulation...
     let lastTimeStamp = msg[msg.length - amount].timeStamp
     let currentTimeStamp = msg[msg.length - 1].timeStamp
@@ -66,7 +66,7 @@ module.exports = {
     // escape regex string
     currentMsg = escapeStringRegexp(currentMsg)
     let occurance = (msgContent.match(new RegExp(currentMsg, "g")) || []).length
-    
+
     if (occurance >= amount) return true
     return false
   }
