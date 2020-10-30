@@ -1,5 +1,5 @@
 {
-  "name": "spamnya",
+  "name": "@satont/spamnya",
   "version": "2.0.0",
   "description": "Spam detector for discord.js bots",
   "main": "index.js",
