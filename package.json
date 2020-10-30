@@ -8,6 +8,9 @@
     "type": "git",
     "url": "https://github.com/satont/spamnya.git"
   },
+  "scripts": {
+    "postversion": "git push && git push --tags"
+  },
   "license": "MIT",
   "private": false,
   "dependencies": {
