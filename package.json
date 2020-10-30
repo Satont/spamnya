@@ -1,6 +1,6 @@
 {
   "name": "@satont/spamnya",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Spam detector for discord.js bots",
   "main": "index.js",
   "author": "Satont <satontworldwide@gmail.com>",
