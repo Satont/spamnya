@@ -7,7 +7,7 @@ A spam detector for discord.js bots
 # Installation
 
 ```bash
-npm i satont/spamnya
+npm i @satont/spamnya
 ```
 
 # Usage
@@ -16,7 +16,7 @@ CommonJs
 
 ```javascript
   const { Client } = require('discord.js')
-  const spamnya = require('spamnya')
+  const spamnya = require('@satont/spamnya')
   const client = new Client()
 
   client.on('message', (message) => {
@@ -36,7 +36,7 @@ CommonJs
 ES6 modules:
 
 ```javascript
-import spamnya from 'spamnya'
+import spamnya from '@satont/spamnya'
 import { Client } from 'discord.js'
 const client = new Client()
 
